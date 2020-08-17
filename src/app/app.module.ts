@@ -11,6 +11,7 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 // Import routes
 import { ROUTES } from './app.routes';
@@ -30,6 +31,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     DomseguroPipe,
     CardsComponent,
     LoadingComponent,
+    ErrorComponent,
   ],
   imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(ROUTES)],
   providers: [],

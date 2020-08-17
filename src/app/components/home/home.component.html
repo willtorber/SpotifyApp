@@ -1,3 +1,5 @@
 <app-loading *ngIf="loading"></app-loading>
 
+<app-error *ngIf="error" [errorMessage]="errorMessage"></app-error>
+
 <app-cards *ngIf="!loading" [items]="newReleases"></app-cards>
