@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
@@ -8,7 +9,15 @@ import { Component, Input } from '@angular/core';
 export class CardsComponent {
   @Input() items: any[] = [];
 
-  constructor() {
-    console.log('CREarte');
+  constructor(private router: Router) {}
+
+  showArtist(item: any) {
+    let artistId: number;
+    if (item.type === 'artist') {
+      artistId = item.id;
+    } else {
+      artistId = item.artists[0].id;
+    }
+    this.router.navigate(['/artist', artistId]);
   }
 }
